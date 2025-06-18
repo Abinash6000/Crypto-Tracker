@@ -4,28 +4,6 @@ Crypto Tracker is a simple yet modern Android application built using **Jetpack 
 
 ---
 
-## 🚀 Features
-
-🔸 **Coin List Screen**  
-- Displays a list of crypto coins  
-- Shows:  
-  - Symbol  
-  - Name  
-  - Price  
-  - 24h change (with increase/decrease indicator)
-
-🔸 **Coin Detail Screen**  
-- Shows:
-  - Market cap  
-  - Current price  
-  - Change in last 24 hours  
-  - 📈 Line chart showing price changes every 6 hours  
-
-🔸 **Responsive UI**  
-- Built with **Material 3 Adaptive Navigation**, ensuring a smooth experience across mobile and large-screen devices (tablets, foldables)
-
----
-
 ## 🛠️ Tech Stack
 
 | Tool/Library         | Purpose                             |
