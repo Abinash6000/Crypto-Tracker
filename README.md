@@ -24,6 +24,8 @@ This app follows a **Multi-Module Architecture**, separating concerns across:
 - `feature:coinlist` – Displays list of crypto coins
 - `feature:coindetail` – Handles detailed view and chart rendering
 
+<img src="https://github.com/user-attachments/assets/2c91c163-eb3d-450e-ad13-ec3292f0254e" alt="Image description" width="300"/>
+
 ---
 
 ## 📸 Screenshots
