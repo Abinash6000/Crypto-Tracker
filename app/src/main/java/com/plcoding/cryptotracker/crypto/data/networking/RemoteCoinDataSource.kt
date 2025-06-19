@@ -1,5 +1,7 @@
 package com.plcoding.cryptotracker.crypto.data.networking
 
+import android.util.Log
+import com.plcoding.cryptotracker.BuildConfig
 import com.plcoding.cryptotracker.core.data.networking.constructUrl
 import com.plcoding.cryptotracker.core.data.networking.safeCall
 import com.plcoding.cryptotracker.core.domain.util.NetworkError
@@ -16,8 +18,6 @@ import io.ktor.client.HttpClient
 import io.ktor.client.request.get
 import io.ktor.client.request.parameter
 import java.time.ZoneId
-import java.time.ZoneOffset
-import java.time.ZoneOffset.UTC
 import java.time.ZonedDateTime
 
 class RemoteCoinDataSource(
@@ -29,7 +29,7 @@ class RemoteCoinDataSource(
             httpClient.get(
                 urlString = constructUrl("/assets")
             ) {
-                parameter("apiKey", "49a8e749b00d35b0f26a1200706923943974a38f61310306807da762a25b59d4")
+                parameter("apiKey", BuildConfig.API_KEY)
             }
         }.map { response ->
             response.data.map { it.toCoin() }
@@ -57,7 +57,7 @@ class RemoteCoinDataSource(
                 parameter("interval", "h6")
                 parameter("start", startMillis)
                 parameter("end", endMillis)
-                parameter("apiKey", "49a8e749b00d35b0f26a1200706923943974a38f61310306807da762a25b59d4")
+                parameter("apiKey", BuildConfig.API_KEY)
             }
         }.map { response ->
             response.data.map { it.toCoinPrice() }
